@@ -1,9 +1,50 @@
-body { 
-    font-family: 'Poppins', sans-serif; 
-    background: #fff; 
-    color: #333; 
-    transition: 0.5s; 
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f0f0f0;
+    color: #333;
+    transition: 0.5s;
     cursor: none;
 }
-#dark-mode:checked ~ .container { background: #111; color: white; }
-.gallery img:hover { transform: scale(1.1); transition: 0.3s; }
+#dark-mode:checked ~ body {
+    background: #111;
+    color: white;
+}
+.toggle {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+.parallax {
+    background: url('https://source.unsplash.com/1600x900/?technology') no-repeat center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+.gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 50px;
+}
+.card {
+    width: 300px;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px;
+    transition: 0.5s;
+}
+.card:hover {
+    transform: scale(1.1);
+    background: rgba(255, 255, 255, 0.3);
+}
