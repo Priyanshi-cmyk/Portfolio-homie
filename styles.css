@@ -1,0 +1,9 @@
+body { 
+    font-family: 'Poppins', sans-serif; 
+    background: #fff; 
+    color: #333; 
+    transition: 0.5s; 
+    cursor: none;
+}
+#dark-mode:checked ~ .container { background: #111; color: white; }
+.gallery img:hover { transform: scale(1.1); transition: 0.3s; }
